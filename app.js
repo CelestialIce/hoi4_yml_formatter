@@ -164,10 +164,7 @@ rawInput.addEventListener("paste", () => {
   setTimeout(process, 0);
 });
 
-if (!rawInput.value.trim()) {
-  rawInput.value = sampleText;
-  process();
-}
+
 
 
 
