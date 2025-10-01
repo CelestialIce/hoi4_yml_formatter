@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOI4 YAML Formatter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>HOI4 Localisation Formatter</h1>
+    <p>Paste localisation entries on the left to preview readable text on the right.</p>
+  </header>
+  <main>
+    <section class="panel">
+      <div class="panel-header">
+        <label for="raw-input">Raw localisation text</label>
+        <div class="panel-actions">
+          <button id="format-button" type="button">Format</button>
+          <button id="clear-button" type="button" class="ghost">Clear</button>
+        </div>
+      </div>
+      <textarea id="raw-input" placeholder="Paste HOI4 localisation content here..."></textarea>
+    </section>
+    <section class="panel">
+      <div class="panel-header panel-header--compact">
+        <button id="copy-button" type="button">Copy YAML</button>
+      </div>
+      <pre id="yaml-output" class="visually-hidden" aria-live="polite"></pre>
+      <div class="preview-list" id="preview-list"></div>
+    </section>
+  </main>
+  <footer>
+    <small>Supports Paradox localisation strings (key: "value"). Newlines like \n are rendered in the preview list.</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
